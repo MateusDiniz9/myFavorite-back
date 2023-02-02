@@ -4,7 +4,7 @@ export const oAuthSchema = Joi.object({
   dataUser: Joi.object({
     displayName: Joi.string().required().trim(),
     email: Joi.string().email().required(),
-    phoneNumber: Joi.string().min(14).max(15).required(),
+    phoneNumber: Joi.string().min(14).max(15).allow(null),
     photoURL: Joi.string().required().trim(),
     providerId: Joi.string().required().trim(),
     uid: Joi.string().required().trim(),

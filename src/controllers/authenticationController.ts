@@ -8,9 +8,9 @@ export async function singInWithOauth(req: Request, res: Response) {
       OauthToken,
       dataUser
     );
-
     return res.status(200).send(result);
   } catch (error) {
+    console.log(error);
     return res.status(400).send({});
   }
 }
